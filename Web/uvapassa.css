@@ -1,0 +1,42 @@
+body{
+    background-color: #d0d0d0;
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    width: 650px;
+    background-color: #FFF;
+    position: relative;
+    padding: 40px 70px;
+    top: 0px;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -395px;
+}
+.container .MensagemTop{
+	padding: 10px;
+}
+.container .Field{
+	float: left;
+	padding: 10px;
+}
+
+.container .Resultado{
+	padding: 40px;
+}
+
+.container .Resultado .ItemResultado{
+	display: table;
+}
+
+.container .Resultado .ItemResultado .Imagem{
+	border: solid 1px #421C52;
+}
+
+.container .Resultado .ItemResultado .Imagem,
+.container .Resultado .ItemResultado .Titulo{
+	display:table-cell;
+	vertical-align:middle;
+	margin: 5px;
+	color: #421C52;
+}
