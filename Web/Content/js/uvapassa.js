@@ -26,10 +26,10 @@ function Pesquisar(){
 		if(val.poster_path)
 			poster = "https://image.tmdb.org/t/p/w500" + val.poster_path;
 		else
-			poster = "noimage.png";
+			poster = "Content/images/noimage.png";
 		
-		var htmlItem = 	"<div id='" + val.id + "' class='ItemResultado'>" + 
-							"<img style='max-width: 50px;' src='" + poster + "' class='Imagem' />" +
+		var htmlItem = 	"<div id='" + val.id + "' class='table-cell ItemResultado'>" + 
+							"<img src='" + poster + "' class='Imagem' /><br/>" +
 							"<span class='Titulo'>" + titulo + "</span>" +
 						"</div>";
 		

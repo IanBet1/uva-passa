@@ -1,0 +1,28 @@
+.FraseImpactante{
+	margin: 20px;
+}
+
+.ItemResultado{
+	float: left;
+	padding: 10px;
+	text-align: center;
+	width: 100px;
+	height: 230px;
+}
+
+.Imagem{
+	width: 100%;
+}
+
+.Titulo{
+	font-size: 12px;
+}
+
+.row [class*="col-"]{
+  margin-bottom: -99999px;
+  padding-bottom: 99999px;
+}
+
+.row{
+  overflow: hidden; 
+}
