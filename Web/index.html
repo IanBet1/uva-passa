@@ -15,7 +15,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-12 text-center">Digite o nome do filme:</div>
+				<div class="col-sm-12 text-center">Digite o nome do filme ou série:</div>
 			</div>
 			<div class="row">
 				<div class="col-sm-12 text-center">
@@ -23,15 +23,42 @@
 					<input type="button" id="btnPesquisa" value="OK" onclick="Pesquisar();"/>
 				</div>
 			</div>
-			<div class="row Resultado" id="divResultado">
+			<div class="row Resultado TituloResultado">
+				<h2>Filmes</h2>
 			</div>
-			<div class="row" id="divPaginacao">
-				  <ul id="ulpaginacao" class="pagination-sm"></ul>
+			<div class="border">
+				<div class="row Resultado" id="divResultadoFilmes">
+					<p>Sem Resultados</p>
+				</div>
+				<div class="row" id="divPaginacaoFilmes">
+					  <ul id="ulpaginacaoFilmes" class="pagination-sm"></ul>
+				</div>
+			</div>
+			<div class="row Resultado TituloResultado">
+				<h2>Séries</h2>
+			</div>
+			<div class="border">
+				<div class="row Resultado" id="divResultadoSeries">
+					<p>Sem Resultados</p>
+				</div>
+				<div class="row" id="divPaginacaoSeries">
+					  <ul id="ulpaginacaoSeries" class="pagination-sm"></ul>
+				</div>
 			</div>
 		</div>
 		<script type="text/javascript" src="Content/js/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="Content/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="Content/js/jquery.simplePagination.js"></script>
 		<script type="text/javascript" src="Content/js/uvapassa.js"></script>
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113067460-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-113067460-1');
+		</script>
 	</body>
 </html>

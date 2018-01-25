@@ -23,6 +23,10 @@
 .Titulo{
 	font-size: 12px;
 }
+.row{	
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
 
 .row [class*="col-"]{
   margin-bottom: -99999px;
@@ -43,4 +47,12 @@ a:not([href]):not([tabindex]){
 	color: rgb(0, 123, 255);
 	text-decoration: none;
 
+}
+
+.row.Resultado{
+	display: none;
+}
+
+.row.Resultado.TituloResultado{
+	margin-top: 20px;
 }
