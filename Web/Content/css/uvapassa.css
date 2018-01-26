@@ -49,6 +49,7 @@ a:not([href]):not([tabindex]){
 
 }
 
+.Resultado,
 .row.Resultado{
 	display: none;
 }

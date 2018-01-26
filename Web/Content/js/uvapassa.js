@@ -15,6 +15,7 @@ function Pesquisar(){
 	
 	BuscarEPreencherSeries(selectedPageSeries);
 	
+	$(".Resultado").show();
 	$(".row.Resultado").css('display', 'flex');
 }
 
