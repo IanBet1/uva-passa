@@ -130,7 +130,13 @@ function BuscarEPreencherSeries(selectedPageSeries){
 }
 
 function AbrirTelaFilme(idFilme){
-	alert('teste');
+	$.ajax({ url: 'Controller/UvaPassaBLL.php',
+         data: {json: '{"tipoReq": "obter"; "tipoConteudo":"F"; "conteudo":"' + idFilme + '";"nota": "0"}'},
+         type: 'post',
+         success: function(output) {
+                      alert(output);
+         }
+});
 }
 
 //Detalhes Filme:

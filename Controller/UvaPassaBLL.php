@@ -6,7 +6,8 @@
 	try {
 		$json = json_decode(file_get_contents($_POST['json']),true);
 		$novoConteudo = new UvaPassaModel();
-		$novoConteudo -> setTipoReq($json['tipoReq']);
+		$novoConteudo -> getTipoReq();
+		echo $novoConteudo -> setTipoReq($json['tipoReq']);
 		$novoConteudo -> setTipoConteudo($json['tipoConteudo']);	
 		foreach ($json['conteudo'] as $conteudo){
 			$classeConteudo = new ConteudoModel($conteudo);
@@ -58,7 +59,7 @@
 					$valores[4]["type"] = 'int';
 					$valores[5]["val"] = $novoConteudo -> conteudo[0] -> getNotaConteudo();
 					$valores[5]["type"] = 'int';
-					$valores[6]["val"] = ''
+					$valores[6]["val"] = '';
 					$valores[6]["type"] = 'char';
 					
 					$dbQuery -> insertInto(
