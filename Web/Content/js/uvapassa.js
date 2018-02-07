@@ -129,6 +129,10 @@ function BuscarEPreencherSeries(selectedPageSeries){
 	});
 }
 
+function AbrirTelaFilme(idFilme){
+	alert('teste');
+}
+
 //Detalhes Filme:
 //https://api.themoviedb.org/3/movie/343611?api_key={api_key}
 

@@ -1,0 +1,22 @@
+.FraseImpactante{
+	margin: 20px;
+}
+
+/* .ItemResultado{
+	float: left;
+	padding: 10px;
+	text-align: center;
+	width: 10%;
+	height: 230px;
+} */
+
+.ItemResultado{
+	margin-left: 20px;
+	width: 280px;
+	text-align: center;
+	padding: 10px;
+}
+
+.Imagem{
+	width: 110px;
+}
