@@ -14,13 +14,17 @@
 					<marquee>Uma pequena passa para o arroz, uma grande passa para a farofa</marquee>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-sm-12 text-center">Digite o nome do filme ou série:</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-12 text-center">
-					<input type="text" id="txtPesquisa"/>
-					<input type="button" id="btnPesquisa" value="OK" onclick="Pesquisar();"/>
+			<div id="idLogoBox" class="LogoBox">
+				<div class="row">
+						<div class="ImageField">
+							<img width="350px" src="Content/images/logo_uva_passa.png"></img>
+						</div>
+						<div class="LogoField">
+							<input type="text" id="txtPesquisa" placeholder="Digite o nome de um filme ou série"/>
+						</div>
+						<div class="LogoField">
+							<input type="button" id="btnPesquisa" value="Pesquisar" onclick="Pesquisar();"/>
+						</div>
 				</div>
 			</div>
 			<div class="row Resultado TituloResultado">
@@ -62,3 +66,5 @@
 		</script>
 	</body>
 </html>
+
+

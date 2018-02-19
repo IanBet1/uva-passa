@@ -1,6 +1,55 @@
+/*Frase de Boas Vindas*/
 .FraseImpactante{
 	margin: 20px;
 }
+
+/*----------Caixa de Pesquisa---------*/
+
+.LogoBox {
+  position: fixed;
+  top: 170px;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%);
+}
+
+.LogoBox .LogoField,
+.LogoBox .ImageField{
+	margin-bottom: 20px;
+	width: 100%;
+	text-align: center !important;
+}
+
+.LogoBoxSearch .LogoField{
+	margin-top: 15px;
+}
+
+.LogoBoxSearch .LogoField,
+.LogoBoxSearch .ImageField{
+	height: 85px;
+	padding: 5px;
+	
+}
+
+.LogoBox .LogoField input,
+.LogoBoxSearch .LogoField input{
+	border: solid 1px gray;
+	height: 40px;
+}
+
+#txtPesquisa{
+	width: 600px;
+	max-width: 100%;
+}
+
+#btnPesquisa{
+	background-color: #f2f2f2;
+	width: 120px;
+	padding: 5px;
+	
+}
+
+/*--------------------------------------*/
 
 /* .ItemResultado{
 	float: left;
@@ -11,42 +60,17 @@
 } */
 
 .ItemResultado{
-	width: 110px;
+	width: 275px;
 	text-align: center;
 	padding: 10px;
 }
 
 .Imagem{
-	width: 100%;
+	width: 110px;
 }
 
-.Titulo{
-	font-size: 12px;
-}
-.row{	
-  margin-left: 0px !important;
-  margin-right: 0px !important;
-}
-
-.row [class*="col-"]{
-  margin-bottom: -99999px;
-  padding-bottom: 99999px;
-}
-
-.row.Resultado{
-	display: -webkit-flex;
-	display: flex; 
-}
-
-.pagination-sm{
-	margin: 0 auto;
-    width: 400px;
-}
-
-a:not([href]):not([tabindex]){
-	color: rgb(0, 123, 255);
-	text-decoration: none;
-
+.Resultado{
+	margin-left: 2px;
 }
 
 .Resultado,
@@ -54,6 +78,6 @@ a:not([href]):not([tabindex]){
 	display: none;
 }
 
-.row.Resultado.TituloResultado{
-	margin-top: 20px;
+.border.Resultado{
+	margin-bottom: 40px;
 }
