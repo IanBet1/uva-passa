@@ -4,22 +4,25 @@
 	include ('../Controller/MySQL.php');
 	
 	try {
-		$json = json_decode(file_get_contents($_POST['json']),true);
 		$novoConteudo = new UvaPassaModel();
-		$novoConteudo -> getTipoReq();
-		echo $novoConteudo -> setTipoReq($json['tipoReq']);
-		$novoConteudo -> setTipoConteudo($json['tipoConteudo']);	
-		foreach ($json['conteudo'] as $conteudo){
-			$classeConteudo = new ConteudoModel($conteudo);
-			if($json['nota'] == 0) {
-				$classeConteudo -> setContNdv(1);
-			} else if($json['nota'] == 1) {
-				$classeConteudo -> setContRuim(1);
-			} else {
-				$classeConteudo -> setContBom(1);
-			}
-			$novoConteudo -> conteudo[] = $classeConteudo;
-		}
+        if(isset($_POST['tipoReq'])) {
+            $novoConteudo -> setTipoReq($_POST['tipoReq']);
+        }
+        if(isset($_POST['tipoConteudo'])) {
+            $novoConteudo -> setTipoConteudo($_POST['tipoConteudo']);
+        }
+        if(isset($_POST['tipoConteudo'])) {
+            $classeConteudo = new ConteudoModel($_POST['conteudo']);
+            if($_POST['nota'] == 0) {
+                $classeConteudo -> setContNdv(1);
+            } else if($_POST['nota'] == 1) {
+                $classeConteudo -> setContRuim(1);
+            } else {
+                $classeConteudo -> setContBom(1);
+            }
+            $novoConteudo -> conteudo[] = $classeConteudo;
+        }
+		var_dump($novoConteudo);
 	} catch	(Exception $e) {
 		return $e;
 	}
@@ -106,7 +109,6 @@
 			}
 		};break;
 		default:{
-			
 		};break;
 	}
 ?>

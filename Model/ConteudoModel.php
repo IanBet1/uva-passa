@@ -14,42 +14,42 @@
 			$this -> setNotaConteudo(0);
 		}
 		
-		private function getIdConteudo(){
+		public function getIdConteudo(){
 			return $this -> idConteudo;
 		}
-		private function setIdConteudo($idConteudo){
+        public function setIdConteudo($idConteudo){
 			$this -> idConteudo = $idConteudo;
 		}
-		
-		private function getContBom(){
+
+        public function getContBom(){
 			return $this -> contBom;
 		}
-		private function setContBom($contBom){
+        public function setContBom($contBom){
 			$this -> contBom = $contBom;
 		}
-		
-		private function getContRuim(){
+
+        public function getContRuim(){
 			return $this -> contRuim;
 		}
-		private function setContRuim($contRuim){
+        public function setContRuim($contRuim){
 			$this -> contRuim = $contRuim;
 		}
-		
-		private function getContNdv(){
+
+        public function getContNdv(){
 			return $this -> contNdv;
 		}
-		private function setContNdv($contNdv){
+        public function setContNdv($contNdv){
 			$this -> contNdv = $contNdv;
 		}
-		
-		private function getNotaConteudo(){
+
+        public function getNotaConteudo(){
 			return $this -> notaConteudo;
 		}
-		private function setNotaConteudo($notaConteudo){
+        public function setNotaConteudo($notaConteudo){
 			$this -> notaConteudo = $notaConteudo;
 		}
-		
-		private function calcularNota(){
+
+        public function calcularNota(){
 			$notaFinal = 0;
 			$val = max($this -> contBom, $this -> contRuim, $this -> contNdv);
 			if($val == $this ->contBom) {

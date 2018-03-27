@@ -1,20 +1,20 @@
 <?php
 	class UvaPassaModel {
-		private $tipoReq;
-		private $tipoConteudo;
-		private $conteudo;
+		public $tipoReq;
+		public $tipoConteudo;
+		public $conteudo;
 		
-		private function getTipoReq(){
+		public function getTipoReq(){
 			return $this -> tipoReq;
 		}
-		private function setTipoReq($tipoReq){
+        public function setTipoReq($tipoReq){
 			$this -> tipoReq = $tipoReq;
 		}
-		
-		private function getTipoConteudo(){
+
+        public function getTipoConteudo(){
 			return $this -> tipoConteudo;
 		}
-		private function setTipoConteudo($tipoConteudo){
+        public function setTipoConteudo($tipoConteudo){
 			$this -> tipoConteudo = $tipoConteudo;
 		}
 		
