@@ -140,8 +140,12 @@ function BuscarEPreencherSeries(selectedPageSeries){
 
 function AbrirTelaFilme(idFilme){
 	$.ajax({ url: 'Controller/UvaPassaBLL.php',
-         data: {json: '{"tipoReq": "obter"; "tipoConteudo":"F"; "conteudo":"' + idFilme + '";"nota": "0"}'},
-         type: 'post',
+         data: {
+	        'tipoReq': 'obter',
+	        'tipoConteudo':'F',
+	        'conteudo': idFilme,
+            'nota': '0' },
+         type: 'POST',
          success: function(output) {
                       alert(output);
          }
