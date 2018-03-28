@@ -22,7 +22,6 @@
             }
             $novoConteudo -> conteudo[] = $classeConteudo;
         }
-		var_dump($novoConteudo);
 	} catch	(Exception $e) {
 		return $e;
 	}
@@ -46,7 +45,7 @@
 				if (mysqli_num_rows($retorno) > 0) {
 					while ($linha = mysqli_fetch_assoc($retorno)) {
 						//Update em linha existente
-						$meubanco -> dbDisconnect();
+						$dbQuery -> dbDisconnect();
 					}
 				} else {
 					$novoConteudo -> conteudo[0] -> calcularNota();
@@ -69,7 +68,7 @@
 						'tb_content', 
 						$valores
 					);
-					$meubanco -> dbDisconnect();
+					$dbQuery -> dbDisconnect();
 					return 0;
 				}
 			} catch (Exception $e) {
@@ -91,9 +90,9 @@
 					'int', 
 					'char'
 				);
-				if (mysqli_num_rows($retorno) > 0) {
+				if (!$retorno || mysqli_num_rows($retorno) > 0) {
 					while ($linha = mysqli_fetch_assoc($retorno)) {
-						$meubanco -> dbDisconnect();
+						$dbQuery -> dbDisconnect();
 						$novoConteudo -> conteudo[0] -> setContBom($linha["cont_good"]);
 						$novoConteudo -> conteudo[0] -> setContRuim($linha["cont_bad"]);
 						$novoConteudo -> conteudo[0] -> setContNdv($linha["cont_ndv"]);
@@ -101,7 +100,7 @@
 						return $novoConteudo -> conteudo[0] -> getNotaConteudo();
 					}
 				} else {
-					$meubanco -> dbDisconnect();
+					$dbQuery -> dbDisconnect();
 					return 0;
 				}
 			} catch (Exception $e) {
