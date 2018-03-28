@@ -147,7 +147,7 @@ function AbrirTelaFilme(idFilme){
             'nota': '0' },
          type: 'POST',
          success: function(output) {
-                      alert(output);
+			$('#divResultadoSeries').html(output);
          }
 	});
 }
