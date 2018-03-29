@@ -91,6 +91,7 @@
 				}
 			}
 			$this -> sqlQuery .= ')';
+			var_dump($this -> sqlQuery);
 			mysqli_query($this -> connectionString, $this -> sqlQuery);
 			return $this -> sqlQuery;
 		}
