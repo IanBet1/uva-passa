@@ -54,15 +54,15 @@
 			$this -> sqlQuery = null;
 			return $this -> dataSet;
 		}
-		public function selectWhereConteudo($tableName, $rowName, $operator0, $operator1, $value0, $value1, $valueType0, $valueType1)
+		public function selectWhereConteudo($tableName, $rowName0, $rowName1, $operator0, $operator1, $value0, $value1, $valueType0, $valueType1)
 		{
-			$this -> sqlQuery = 'SELECT * FROM '.$this -> databaseName.'.'.$tableName.' WHERE '.$rowName.' '.$operator0.' ';
+			$this -> sqlQuery = 'SELECT * FROM '.$this -> databaseName.'.'.$tableName.' WHERE '.$rowName0.' '.$operator0.' ';
 			if ($valueType0 == 'int') {
 				$this -> sqlQuery .= $value0;
 			} elseif ($valueType0 == 'char') {
 				$this -> sqlQuery .= "'".$value0."'";
 			}
-			$this -> sqlQuery .= 'AND '.$operator1.' ';
+			$this -> sqlQuery .= ' AND '.$rowName1.' '.$operator1.' ';
 			if ($valueType1 == 'int') {
 				$this -> sqlQuery .= $value1;
 			} elseif ($valueType1 == 'char') {
