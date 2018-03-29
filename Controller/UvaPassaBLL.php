@@ -90,7 +90,6 @@
 					'int', 
 					'char'
 				);
-				return 10;
 				if (!$retorno || mysqli_num_rows($retorno) > 0) {
 					while ($linha = mysqli_fetch_assoc($retorno)) {
 						$dbQuery -> dbDisconnect();
@@ -98,11 +97,11 @@
 						$novoConteudo -> conteudo[0] -> setContRuim($linha["cont_bad"]);
 						$novoConteudo -> conteudo[0] -> setContNdv($linha["cont_ndv"]);
 						$novoConteudo -> conteudo[0] -> calcularNota();
-						return $novoConteudo -> conteudo[0] -> getNotaConteudo();
+						echo $novoConteudo -> conteudo[0] -> getNotaConteudo();
 					}
 				} else {
 					$dbQuery -> dbDisconnect();
-					return 0;
+					echo 0;
 				}
 			} catch (Exception $e) {
 				$dbQuery -> dbDisconnect();
