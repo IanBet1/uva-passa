@@ -147,13 +147,15 @@ function AbrirTelaFilme(idFilme){
             'nota': '0' },
          type: 'POST',
          success: function(output) {
-			$('#divResultadoSeries').html(output);
+			 sessionStorage.setItem("ErroDeMerda", output);
+			 $("#myModal").modal();
+			 $("#ModalContent").html(output);
          }
 	});
 }
 
 function AbrirTelaSerie(idSerie){
-	alert('Em desenvolvimento');
+	//alert('Em desenvolvimento');
 	// $.ajax({ url: 'Controller/UvaPassaBLL.php',
          // data: {json: '{"tipoReq": "obter"; "tipoConteudo":"F"; "conteudo":"' + idFilme + '";"nota": "0"}'},
          // type: 'post',
