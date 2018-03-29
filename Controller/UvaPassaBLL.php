@@ -38,7 +38,7 @@
 					'=', 
 					'=', 
 					$novoConteudo -> conteudo[0] -> getIdConteudo(), 
-					$novoConteudo -> getTipoReq(), 
+					$novoConteudo -> getTipoConteudo(), 
 					'int', 
 					'char'
 				);
@@ -57,7 +57,7 @@
 					$valores[2]["type"] = 'int';
 					$valores[3]["val"] = $novoConteudo -> conteudo[0] -> getContRuim();
 					$valores[3]["type"] = 'int';
-					$valores[4]["val"] = $novoConteudo -> conteudo[0] -> getContDnv();
+					$valores[4]["val"] = $novoConteudo -> conteudo[0] -> getContNdv();
 					$valores[4]["type"] = 'int';
 					$valores[5]["val"] = $novoConteudo -> conteudo[0] -> getNotaConteudo();
 					$valores[5]["type"] = 'int';
