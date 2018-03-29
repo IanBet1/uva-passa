@@ -45,7 +45,7 @@ function BuscarEPreencherFilmes(selectedPageFilmes){
 			poster = "Content/images/noimage.png";		
 		
 		var htmlItem = 	"<div id='" + val.id + "' class='ItemResultado'>" + 
-							"<a href='#' onclick='AbrirTelaFilme(" + val.id + ");' style='width:110px; float: left;'>" +
+							"<a href='#' onclick='VotarFilme(" + val.id + ");' style='width:110px; float: left;'>" +
 								"<img src='" + poster + "' style='width:100%;'></a>" +
 							"<div style='float: left; text-align: left; padding-left: 10px;width: 140px;'>" +
 								"<a href='#' onclick='AbrirTelaFilme(" + val.id + ");'>" +
@@ -146,7 +146,7 @@ function AbrirTelaFilme(idFilme){
             'nota': '0' },
          type: 'POST',
          success: function(output) {
-			 sessionStorage.setItem("ErroDeMerda", output);
+			 //sessionStorage.setItem("ErroDeMerda", output);
 			 $("#myModal").modal();
 			 $("#ModalContent").html(output);
          }
@@ -159,10 +159,10 @@ function VotarFilme(idFilme){
 	        'tipoReq': 'votar',
 	        'tipoConteudo':'F',
 	        'conteudo': idFilme,
-            'nota': '0' },
+            'nota': '1' },
          type: 'POST',
          success: function(output) {
-			 sessionStorage.setItem("ErroDeMerda", output);
+			 //sessionStorage.setItem("ErroDeMerda", output);
 			 $("#myModal").modal();
 			 $("#ModalContent").html(output);
          }
