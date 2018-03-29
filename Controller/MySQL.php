@@ -95,6 +95,15 @@
 			mysqli_query($this -> connectionString, $this -> sqlQuery);
 			return $this -> sqlQuery;
 		}
+		public function updateData($tableName, $rowName0, $rowName1, $rowName2, $values)
+		{
+			$j = count($values);
+			$i = null;
+			$this -> sqlQuery = 'UPDATE '.$tableName.' SET '.$rowName0.' = '.$rowName0.' + '.$values[0]["val"].' WHERE '.$rowName1.' = '.$values[1]["val"].' AND '.$rowName2.' = '."'".$values[2]["val"]."'";
+			var_dump($this -> sqlQuery);
+			mysqli_query($this -> connectionString, $this -> sqlQuery);
+			return $this -> sqlQuery;
+		}
 		public function selectFreeRun($query)
 		{
 			$this -> dataSet = mysqli_query($this -> connectionString, $query);

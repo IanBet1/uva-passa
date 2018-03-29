@@ -44,7 +44,34 @@
 				);
 				if (mysqli_num_rows($retorno) > 0) {
 					while ($linha = mysqli_fetch_assoc($retorno)) {
-						//Update em linha existente
+						$valores[0]["val"] = 1;
+						$valores[1]["val"] = $novoConteudo -> conteudo[0] -> getIdConteudo();
+						$valores[2]["val"] = $novoConteudo -> getTipoConteudo();
+						if($novoConteudo -> conteudo[0] ->  getNotaConteudo() == 2){
+							$dbQuery -> updateData(
+								'tb_content',
+								'cont_good',
+								'id_content',
+								'content_type',
+								$valores
+							);
+						} elseif($novoConteudo -> conteudo[0] -> getNotaConteudo() == 1){
+							$dbQuery -> updateData(
+								'tb_content',
+								'cont_bad',
+								'id_content',
+								'content_type',
+								$valores
+							);
+						} elseif($novoConteudo -> conteudo[0] -> getNotaConteudo() == 0){
+							$dbQuery -> updateData(
+								'tb_content',
+								'cont_ndv',
+								'id_content',
+								'content_type',
+								$valores
+							);
+						}
 						$dbQuery -> dbDisconnect();
 					}
 				} else {
