@@ -7,7 +7,6 @@ $(document).ready(function(){
 });
 
 function Pesquisar(){
-	
 	var selectedPageFilmes = 1;
 	var selectedPageSeries = 1;
 	
@@ -142,6 +141,22 @@ function AbrirTelaFilme(idFilme){
 	$.ajax({ url: 'Controller/UvaPassaBLL.php',
          data: {
 	        'tipoReq': 'obter',
+	        'tipoConteudo':'F',
+	        'conteudo': idFilme,
+            'nota': '0' },
+         type: 'POST',
+         success: function(output) {
+			 sessionStorage.setItem("ErroDeMerda", output);
+			 $("#myModal").modal();
+			 $("#ModalContent").html(output);
+         }
+	});
+}
+
+function VotarFilme(idFilme){
+	$.ajax({ url: 'Controller/UvaPassaBLL.php',
+         data: {
+	        'tipoReq': 'votar',
 	        'tipoConteudo':'F',
 	        'conteudo': idFilme,
             'nota': '0' },
