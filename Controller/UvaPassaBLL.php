@@ -63,7 +63,6 @@
 					$valores[5]["type"] = 'int';
 					$valores[6]["val"] = '';
 					$valores[6]["type"] = 'char';
-					
 					$dbQuery -> insertInto(
 						'tb_content', 
 						$valores

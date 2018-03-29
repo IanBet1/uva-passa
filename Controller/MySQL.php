@@ -74,10 +74,11 @@
 		}
 		public function insertInto($tableName, $values)
 		{
+			$j = count($values);
 			$i = null;
 			$this -> sqlQuery = 'INSERT INTO '.$tableName.' VALUES (';
 			$i = 0;
-			while ($values[$i]["val"] != null && $values[$i]["type"] != null) {
+			while ($i < $j) {
 				if ($values[$i]["type"] == "char") {
 					$this -> sqlQuery .= "'";
 					$this -> sqlQuery .= $values[$i]["val"];
@@ -85,13 +86,12 @@
 				} elseif ($values[$i]["type"] == 'int') {
 					$this -> sqlQuery .= $values[$i]["val"];
 				}
-				$i++;
-				if ($values[$i]["val"] != null) {
+				if($i != $j-1){
 					$this -> sqlQuery .= ',';
 				}
+				$i++;
 			}
 			$this -> sqlQuery .= ')';
-			var_dump($this -> sqlQuery);
 			mysqli_query($this -> connectionString, $this -> sqlQuery);
 			return $this -> sqlQuery;
 		}
