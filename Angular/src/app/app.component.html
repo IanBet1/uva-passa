@@ -1,0 +1,79 @@
+<!-- <h2>{{ title }}</h2> -->
+
+<!-- <up-banner 
+  fotoUrl="https://image.tmdb.org/t/p/w500/3ihwizqw2Nq8YsnHMTLswxU8owE.jpg" 
+  fotoDescription="Computer Chronicles"></up-banner> -->
+
+<!--   
+  <up-banner 
+    *ngFor="let produto of produtosav" 
+    [fotoUrl]="(baseUrl)+(produto.poster_path)"
+    [fotoDescription]="(produto.title) + ' (' + (produto.release_date).substring(0,4) + ')'">
+  </up-banner> -->
+
+<div class="container">
+  <div class="row FraseImpactante">
+    <div class="col-sm-12">
+      <marquee>{{ marquee }}</marquee>
+    </div>
+  </div>
+  <up-pesquisa></up-pesquisa>
+  <div class="row Resultado TituloResultado">
+    <h2>Filmes</h2>
+  </div>
+  <div class="border Resultado">
+    <div class="row Resultado" id="divResultadoFilmes">
+      <!-- <p>Sem Resultados</p> -->
+      <p><up-banner 
+        *ngFor="let produto of produtosav" 
+        [fotoUrl]="(baseUrl)+(produto.poster_path)"
+        [fotoDescription]="(produto.title) + ' (' + (produto.release_date).substring(0,4) + ')'">
+      </up-banner> </p>
+    </div>
+    <div class="row" id="divPaginacaoFilmes">
+        <ul id="ulpaginacaoFilmes" class="pagination-sm"></ul>
+    </div>
+  </div>
+  <div class="row Resultado TituloResultado">
+    <h2>Séries</h2>
+  </div>
+  <div class="border Resultado">
+    <div class="row Resultado" id="divResultadoSeries">
+      <p>Sem Resultados</p>
+    </div>
+    <div class="row" id="divPaginacaoSeries">
+        <ul id="ulpaginacaoSeries" class="pagination-sm"></ul>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<!-- <div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content" >
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body" id="ModalContent">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- <script type="text/javascript" src="Content/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="Content/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="Content/js/jquery.simplePagination.js"></script>
+<script type="text/javascript" src="Content/js/uvapassa.js"></script> -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113067460-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113067460-1');
+</script> -->
